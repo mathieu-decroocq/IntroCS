@@ -21,6 +21,11 @@ namespace Cesi.IntroCS.LinqClassLibrary
             //     // LINQ method calls here
             //     ;
 
+            List<double> doubles = new List<double> { 2.0, 2.1, 2.2, 2.3 };
+            double whatsThis = doubles.First(val => val > 2.3);
+
+
+
             return inValues
                 .Where(v => v.Contains(pattern))
                 .OrderBy(v => v);

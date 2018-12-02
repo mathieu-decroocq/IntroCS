@@ -6,14 +6,11 @@ using Cesi.IntroCS.LinqClassLibrary;
 
 namespace Cesi.IntroCS.LinqUnitTest
 {
-    /// <summary>
-    /// Description résumée pour QuerySyntaxExerciseTest
-    /// </summary>
     [TestClass]
     public class QuerySyntaxExerciseTest
     {
         [TestMethod]
-        public void TestQuerySyntax()
+        public void QueryFilterAndSort()
         {
             var answer = QuerySyntaxExercise.FilterAndSort(new List<string> { "foo", "bar", "goo", "onion" }, "oo");
             Assert.AreEqual("foo, goo", string.Join(", ", answer));

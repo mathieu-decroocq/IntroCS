@@ -6,12 +6,11 @@ using Cesi.IntroCS.LinqClassLibrary;
 
 namespace Cesi.IntroCS.LinqUnitTest
 {
-
     [TestClass]
     public class MethodSyntaxExerciseTest
     {
         [TestMethod]
-        public void TestMethodSyntax()
+        public void MethodFilterAndSort()
         {
             var answer = MethodSyntaxExercise.FilterAndSort(new List<string> { "foo", "bar", "goo", "onion" }, "oo");
             Assert.AreEqual("foo, goo", string.Join(", ", answer));

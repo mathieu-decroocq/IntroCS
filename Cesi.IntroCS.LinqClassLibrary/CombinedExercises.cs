@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cesi.IntroCS.ConsoleApp
 {
-    public class CombinedExercise1
+    public class CombinedExercises
     {
         /// <summary>
         /// La méthode suivante doit retourner true si chaque element dans la liste squares 
@@ -24,13 +24,8 @@ namespace Cesi.IntroCS.ConsoleApp
             //return intersect.Count() == squares.Count();
 
             return numbers.Select(n => n * n).SequenceEqual(squares);
-
-
         }
-    }
 
-    public class CombinedExercise2
-    {
         /// <summary>
         /// Avec une suite de mots, éliminez ceux qui n'ont pas le caractère 'e' en eux,
         /// puis triez les mots restants par ordre alphabétique, et retourner la phare suivante en utilisant le dernier mot de la liste :

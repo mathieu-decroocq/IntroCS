@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CombinedExercises.cs" />
+    <Compile Include="MultipleValueExercises.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MethodSyntaxExercise.cs" />
     <Compile Include="QuerySyntaxExercise.cs" />
+    <Compile Include="SingleValueExercise.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
