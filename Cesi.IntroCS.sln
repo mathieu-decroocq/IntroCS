@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cesi.IntroCS.ConsoleApp", "Cesi.IntroCS.ConsoleApp\Cesi.IntroCS.ConsoleApp.csproj", "{13A347B6-B049-4107-B560-5EE2E371EBFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cesi.IntroCS.LinqUnitTest", "Cesi.IntroCS.LinqUnitTest\Cesi.IntroCS.LinqUnitTest.csproj", "{0124936A-7EC1-46CA-8674-AEFC35E9944C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cesi.IntroCS.LinqClassLibrary", "Cesi.IntroCS.LinqClassLibrary\Cesi.IntroCS.LinqClassLibrary.csproj", "{ECBD8503-DA0F-44DF-8439-60B037B69835}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{13A347B6-B049-4107-B560-5EE2E371EBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13A347B6-B049-4107-B560-5EE2E371EBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13A347B6-B049-4107-B560-5EE2E371EBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0124936A-7EC1-46CA-8674-AEFC35E9944C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0124936A-7EC1-46CA-8674-AEFC35E9944C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0124936A-7EC1-46CA-8674-AEFC35E9944C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0124936A-7EC1-46CA-8674-AEFC35E9944C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECBD8503-DA0F-44DF-8439-60B037B69835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECBD8503-DA0F-44DF-8439-60B037B69835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECBD8503-DA0F-44DF-8439-60B037B69835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECBD8503-DA0F-44DF-8439-60B037B69835}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
