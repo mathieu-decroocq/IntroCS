@@ -49,5 +49,25 @@ namespace Cesi.IntroCS.LinqUnitTest
             str = string.Join(", ", answer);
             Assert.AreEqual("start", str);
         }
+
+        [TestMethod]
+        public void GetDistinctShortWords()
+        {
+            var words = "Cant see the forest for the trees".Split(' ');
+            var answer = MultipleValueExercises.GetDistinctShortWords(words);
+            var str = string.Join(", ", answer);
+            Assert.AreEqual("see, the, for", str);
+
+            words = "Im sorry Dave I cant do that".Split(' ');
+            answer = MultipleValueExercises.GetDistinctShortWords(words);
+            str = string.Join(", ", answer);
+            Assert.AreEqual("Im, I, do", str);
+
+            words = "it was the best of times it was the worst of times".Split(' ');
+            answer = MultipleValueExercises.GetDistinctShortWords(words);
+            str = string.Join(", ", answer);
+            Assert.AreEqual("it, was, the, of", str);
+
+        }
     }
 }

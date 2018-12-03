@@ -48,11 +48,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatedSequenceExercisesTest.cs" />
+    <Compile Include="ChangeOrderExercisesTest.cs" />
     <Compile Include="CombinedExerciseTest.cs" />
     <Compile Include="MultipleValueExercisesTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MethodSyntaxExerciseTest.cs" />
     <Compile Include="QuerySyntaxExerciseTest.cs" />
+    <Compile Include="SingleCalculatedValueExercisesTest.cs" />
     <Compile Include="SingleValueExerciseTest.cs" />
   </ItemGroup>
   <ItemGroup>

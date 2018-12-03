@@ -21,7 +21,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
 
 
         /// <summary>
-        /// Renvoie tous les mots de la séquence entre "start" (inclus) et "end" (non inclus)
+        /// Retourne tous les mots de la séquence entre "start" (inclus) et "end" (non inclus)
         /// </summary>
         /// <example>
         /// Pour { "One", "start", "more", "end", "thing" }
@@ -32,6 +32,20 @@ namespace Cesi.IntroCS.LinqClassLibrary
             // Uncomment:
             // return words.???();
             return words.SkipWhile(s => s != "start").TakeWhile(s => s != "end");
+        }
+
+
+
+        /// <summary>
+        /// Retourne tous les mots comportant moins de quatre lettres sans avoir de double.
+        /// </summary>
+        public static IEnumerable<string> GetDistinctShortWords(
+            IEnumerable<string> words)
+        {
+            // Uncomment:
+            // return words.???();
+
+            return words.Where(w => w.Length < 4).Distinct();
         }
     }
 }

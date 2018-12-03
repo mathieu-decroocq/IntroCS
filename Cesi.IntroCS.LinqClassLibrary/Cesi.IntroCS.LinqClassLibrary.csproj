@@ -40,11 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatedSequenceExercises.cs" />
+    <Compile Include="ChangeOrderExercises.cs" />
     <Compile Include="CombinedExercises.cs" />
+    <Compile Include="Models\IName.cs" />
+    <Compile Include="Models\Name.cs" />
     <Compile Include="MultipleValueExercises.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MethodSyntaxExercise.cs" />
     <Compile Include="QuerySyntaxExercise.cs" />
+    <Compile Include="SingleCalculatedValueExercises.cs" />
     <Compile Include="SingleValueExercise.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
