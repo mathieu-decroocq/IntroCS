@@ -65,38 +65,6 @@ namespace Cesi.IntroCS.ConsoleApp
         }
         #endregion
 
-        #region Async Exemple
-
-        private static async Task ExempleHttpClient()
-        {
-            HttpClient client = new HttpClient();
-
-            string data = await client.GetStringAsync("https://anapioficeandfire.com/api/characters/583");
-
-            Console.WriteLine(data);
-        }
-
-        private static async Task ExempleTaskRun()
-        {
-            ShowThreadInfo("Application");
-
-            await Task.Run(() =>
-            {
-                ShowThreadInfo("Task");
-            });
-
-            // The example displays the following output:
-            //       Application thread ID: 1
-            //       Task thread ID: 3
-        }
-
-        private static void ShowThreadInfo(String s)
-        {
-            Console.WriteLine("{0} Thread ID: {1}", s, Thread.CurrentThread.ManagedThreadId);
-        }
-
-        #endregion
-
         #region Delegate Exemple
         delegate double MathAction(double num);
 
@@ -143,6 +111,38 @@ namespace Cesi.IntroCS.ConsoleApp
 
             Func<double, double> cube = (s) => s * s * s;
             Console.WriteLine("cube: {0}", cube);
+        }
+
+        #endregion
+
+        #region Async Exemple
+
+        private static async Task ExempleHttpClient()
+        {
+            HttpClient client = new HttpClient();
+
+            string data = await client.GetStringAsync("https://anapioficeandfire.com/api/characters/583");
+
+            Console.WriteLine(data);
+        }
+
+        private static async Task ExempleTaskRun()
+        {
+            ShowThreadInfo("Application");
+
+            await Task.Run(() =>
+            {
+                ShowThreadInfo("Task");
+            });
+
+            // The example displays the following output:
+            //       Application thread ID: 1
+            //       Task thread ID: 3
+        }
+
+        private static void ShowThreadInfo(String s)
+        {
+            Console.WriteLine("{0} Thread ID: {1}", s, Thread.CurrentThread.ManagedThreadId);
         }
 
         #endregion
