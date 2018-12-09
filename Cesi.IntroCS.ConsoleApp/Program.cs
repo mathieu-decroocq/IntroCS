@@ -22,9 +22,14 @@ namespace Cesi.IntroCS.ConsoleApp
             //ExempleStringFormat(userName, now);
             //ExempleStringBuilder();
 
-            ExempleHttpClient().Wait();
+            //ExempleHttpClient().Wait();
 
-            ExempleTaskRun().Wait();
+            //ExempleTaskRun().Wait();
+
+            // ExempleDelegate();
+
+            // ExempleFunc();
+
 
             Console.WriteLine("Pressez n'importe quelle touche pour quitter");
             Console.ReadKey();
@@ -92,7 +97,55 @@ namespace Cesi.IntroCS.ConsoleApp
 
         #endregion
 
+        #region Delegate Exemple
+        delegate double MathAction(double num);
 
+        static double Double(double input)
+        {
+            return input * 2;
+        }
+
+        private static void ExempleDelegate()
+        {
+            //instantiate delegate
+            MathAction ma = Double;
+
+            // invoke
+            double multByTwo = ma(4.5);
+            Console.WriteLine("multByTwo: {0}", multByTwo);
+
+            // instantiate delegate with anonymous method
+            MathAction ma2 = delegate (double input)
+            {
+                return input * input;
+            };
+
+            double square = ma2(5);
+            Console.WriteLine("square: {0}", square);
+
+            // instantiate delegate with lambda expression
+            MathAction ma3 = (s) => s * s * s;
+            double cube = ma3(4.375);
+
+            Console.WriteLine("cube: {0}", cube);
+        }
+        #endregion
+
+        #region Action and Func
+
+        private static void ExempleFunc()
+        {
+            Func<double, double> multByTwo = Double;
+            Console.WriteLine("multByTwo: {0}", multByTwo(4.5));
+
+            Func<double, double> square = (input) => input * input;
+            Console.WriteLine("square: {0}", square);
+
+            Func<double, double> cube = (s) => s * s * s;
+            Console.WriteLine("cube: {0}", cube);
+        }
+
+        #endregion
 
         // Affiche le contenu de la variable dans la fenetre Sortie
         //Debug.WriteLine(outputV1);
