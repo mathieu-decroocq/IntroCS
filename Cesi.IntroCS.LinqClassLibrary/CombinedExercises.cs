@@ -20,10 +20,6 @@ namespace Cesi.IntroCS.ConsoleApp
             //   // .???().???() ... .???()
             //   ;
 
-            //var intersect = numbers.Select(n => n * n).Intersect(squares);
-            //return intersect.Count() == squares.Count();
-
-            return numbers.Select(n => n * n).SequenceEqual(squares);
         }
 
         /// <summary>
@@ -38,12 +34,6 @@ namespace Cesi.IntroCS.ConsoleApp
             //return words
             //    // .???().???() ... .???()
             //    ;
-
-            return words.Where(w => w.Contains('e'))
-                            .OrderBy(w => w)
-                            .Select(w => $"The last word is {w}")
-                            .LastOrDefault();
-
         }
     }
 }

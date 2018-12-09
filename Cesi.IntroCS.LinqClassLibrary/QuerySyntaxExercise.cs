@@ -20,12 +20,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
             //return from value in inValues
             //           // LINQ instructions here
             //       select value;
-
-            return from value in inValues
-                   where value.Contains(pattern)
-                   orderby value
-                   select value;
-
         }
     }
 }

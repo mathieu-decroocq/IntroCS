@@ -16,8 +16,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return words.???();
-     
-            return words.Count(w => w.StartsWith(startString));
         }
 
         /// <summary>
@@ -27,8 +25,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return words.???();
-
-            return words.Min(w => w.Length);
         }
     }
 }

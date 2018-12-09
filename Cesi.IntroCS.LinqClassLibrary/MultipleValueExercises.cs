@@ -16,7 +16,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return words.???();
-            return words.Take(5).Skip(2);
         }
 
 
@@ -31,7 +30,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return words.???();
-            return words.SkipWhile(s => s != "start").TakeWhile(s => s != "end");
         }
 
 
@@ -44,8 +42,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return words.???();
-
-            return words.Where(w => w.Length < 4).Distinct();
         }
     }
 }

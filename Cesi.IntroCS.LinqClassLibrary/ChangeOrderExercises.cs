@@ -17,8 +17,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return names.???();
-
-            return names.OrderByDescending(n => n.Last);
         }
 
         // Return the provided list of names, ordered by Last, then
@@ -27,8 +25,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return names.???();
-
-            return names.OrderBy(n => n.Last).ThenBy(n => n.First).ThenBy(n => n.Middle);
         }
     }
 

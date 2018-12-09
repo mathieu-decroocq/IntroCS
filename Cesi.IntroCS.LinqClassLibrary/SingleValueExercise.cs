@@ -16,7 +16,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetFirstSingleLetterWord(IEnumerable<string> words)
         {
             // return words.???();
-            return words.First(w => w.Length == 1);
         }
 
         /// <summary>
@@ -26,7 +25,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetLastWordWithHerInIt(IEnumerable<string> words)
         {
             // return words.???();
-            return words.Last(w => w.Contains("her"));
         }
 
         /// <summary>
@@ -36,7 +34,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetFifthWordIfItExists(IEnumerable<string> words)
         {
             // return words.???();
-            return words.ElementAtOrDefault(4);
         }
 
         /// <summary>
@@ -46,7 +43,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetLastWordIfAny(IEnumerable<string> words)
         {
             // return words.???();
-            return words.LastOrDefault();
         }
     }
 }

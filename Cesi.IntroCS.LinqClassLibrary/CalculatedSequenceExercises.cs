@@ -16,8 +16,6 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return names.???();
-
-            return names.Select(n => $"{n.Last}, {n.First}");
         }
     }
 }
