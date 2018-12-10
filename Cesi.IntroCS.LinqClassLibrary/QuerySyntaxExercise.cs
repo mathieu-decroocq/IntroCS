@@ -20,6 +20,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
             //return from value in inValues
             //           // LINQ instructions here
             //       select value;
+            throw new NotImplementedException();
         }
     }
 }

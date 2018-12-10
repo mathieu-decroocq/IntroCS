@@ -17,6 +17,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return names.???();
+            throw new NotImplementedException();
         }
 
         // Return the provided list of names, ordered by Last, then
@@ -25,6 +26,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return names.???();
+            throw new NotImplementedException();
         }
     }
 

@@ -19,7 +19,7 @@ namespace Cesi.IntroCS.ConsoleApp
             //return numbers
             //   // .???().???() ... .???()
             //   ;
-
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -34,6 +34,7 @@ namespace Cesi.IntroCS.ConsoleApp
             //return words
             //    // .???().???() ... .???()
             //    ;
+            throw new NotImplementedException();
         }
     }
 }

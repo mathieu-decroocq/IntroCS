@@ -16,6 +16,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return words.???();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -25,6 +26,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         {
             // Uncomment:
             // return words.???();
+            throw new NotImplementedException();
         }
     }
 }
