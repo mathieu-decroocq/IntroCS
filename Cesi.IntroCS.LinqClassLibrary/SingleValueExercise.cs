@@ -16,6 +16,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetFirstSingleLetterWord(IEnumerable<string> words)
         {
             // return words.???();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -25,6 +26,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetLastWordWithHerInIt(IEnumerable<string> words)
         {
             // return words.???();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -34,6 +36,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetFifthWordIfItExists(IEnumerable<string> words)
         {
             // return words.???();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -43,6 +46,7 @@ namespace Cesi.IntroCS.LinqClassLibrary
         public static string GetLastWordIfAny(IEnumerable<string> words)
         {
             // return words.???();
+            throw new NotImplementedException();
         }
     }
 }

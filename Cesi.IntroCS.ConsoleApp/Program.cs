@@ -18,7 +18,46 @@ namespace Cesi.IntroCS.ConsoleApp
 
             DateTime now = DateTime.Now;
 
-            ExempleBasicConcat(userName, now);
+            string output = "Bonjour " + userName + ". Nous sommes en " + now.Year + " et il est " + now.ToShortTimeString() + ".";
+
+            Console.WriteLine(output);
+
+            Console.WriteLine("Pressez n'importe quelle touche pour quitter");
+            Console.ReadKey();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // ExempleBasicConcat(userName, now);
             //ExempleStringFormat(userName, now);
             //ExempleStringBuilder();
 
@@ -26,14 +65,15 @@ namespace Cesi.IntroCS.ConsoleApp
 
             //ExempleTaskRun().Wait();
 
-            // ExempleDelegate();
+            ExempleDelegate();
 
             // ExempleFunc();
 
+ 
 
-            Console.WriteLine("Pressez n'importe quelle touche pour quitter");
-            Console.ReadKey();
         }
+
+  
 
         #region StringFormat Exemple
         private static void ExempleBasicConcat(string userName, DateTime now)
@@ -67,12 +107,10 @@ namespace Cesi.IntroCS.ConsoleApp
 
         #region Delegate Exemple
         delegate double MathAction(double num);
-
         static double Double(double input)
         {
             return input * 2;
         }
-
         private static void ExempleDelegate()
         {
             //instantiate delegate
@@ -87,7 +125,6 @@ namespace Cesi.IntroCS.ConsoleApp
             {
                 return input * input;
             };
-
             double square = ma2(5);
             Console.WriteLine("square: {0}", square);
 
@@ -107,10 +144,10 @@ namespace Cesi.IntroCS.ConsoleApp
             Console.WriteLine("multByTwo: {0}", multByTwo(4.5));
 
             Func<double, double> square = (input) => input * input;
-            Console.WriteLine("square: {0}", square);
+            Console.WriteLine("square: {0}", square(5));
 
             Func<double, double> cube = (s) => s * s * s;
-            Console.WriteLine("cube: {0}", cube);
+            Console.WriteLine("cube: {0}", cube(5));
         }
 
         #endregion
