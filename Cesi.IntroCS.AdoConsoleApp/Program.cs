@@ -12,8 +12,8 @@ namespace Cesi.IntroCS.AdoConsoleApp
         static void Main(string[] args)
         {
             string connectionString =
-           "Data Source=(local);Initial Catalog=Northwind;"
-           + "Integrated Security=true";
+           "Data Source=137.135.134.167;Initial Catalog=Northwind;User ID=CesiAdmin;Password=s4Jb485C34Le";     
+          
 
             // Provide the query string with a parameter placeholder.
             string queryString =
