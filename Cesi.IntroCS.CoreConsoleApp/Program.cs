@@ -11,6 +11,52 @@ namespace Cesi.IntroCS.CoreConsoleApp
     {
         static void Main(string[] args)
         {
+            // AddPost();
+
+            // UpdateBlogUrl();
+
+            // DeleteLastPost();
+            var postDAL = new PostDAL();
+            postDAL.Update(new Post { Id = 2, Title = "Post 2 up", Content = "Du contenu", BlogId = 1 });
+
+            ReadAll();
+
+            Console.ReadLine();
+        }
+
+
+        private static void AddPost()
+        {
+            using (var context = new BloggingContext())
+            {
+                var post = new Post { Title = "Post du jour", Content = "Du contenu", BlogId = 1 };
+                context.Posts.Add(post);
+                context.SaveChanges();
+            }
+        }
+
+        private static void UpdateBlogUrl()
+        {
+            //using (var context = new BloggingContext())
+            //{
+            //    var blog = context.Blogs.First();
+            //    blog.Url = "http://sample.com/blog";
+            //    context.SaveChanges();
+            //}
+        }
+
+        private static void DeleteLastPost()
+        {
+            using (var context = new BloggingContext())
+            {
+                var post = context.Posts.Last();
+                context.Posts.Remove(post);
+                context.SaveChanges();
+            }
+        }
+
+        private static void ReadAll()
+        {
             using (var context = new BloggingContext())
             {
                 List<Blog> blogs = context.Blogs.Include(b => b.Posts).ToList();
@@ -23,7 +69,6 @@ namespace Cesi.IntroCS.CoreConsoleApp
                     }
                 }
             }
-            Console.ReadLine();
         }
     }
 }
