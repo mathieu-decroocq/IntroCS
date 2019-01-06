@@ -1,0 +1,29 @@
+﻿@model Cesi.IntroCS.MVC.Models.ContactModel
+
+@using (Html.BeginForm("Send", "Contact", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Demande de contact</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Message)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Message)
+            @Html.ValidationMessageFor(model => model.Message)
+        </div>
+
+        <p>
+            <input type="submit" value="Envoyer" />
+        </p>
+    </fieldset>
+}
