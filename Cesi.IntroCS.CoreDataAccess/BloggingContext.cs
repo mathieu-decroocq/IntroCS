@@ -6,10 +6,21 @@ namespace Cesi.IntroCS.CoreDataAccess
 {
     public class BloggingContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public BloggingContext(DbContextOptions<BloggingContext> options)
+            : base(options)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;ConnectRetryCount=0");
         }
+
+        public BloggingContext()
+        {
+
+        }
+
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;ConnectRetryCount=0");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
