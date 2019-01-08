@@ -61,5 +61,9 @@ namespace Cesi.IntroCS.CoreDataAccess
                 context.SaveChanges();
             }
         }
+
+        public void Dispose()
+        {
+        }
     }
 }

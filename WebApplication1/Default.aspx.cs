@@ -11,7 +11,12 @@ namespace Cesi.IntroCS.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            myBtn.Text = "test";
+        }
 
+        protected void myBtn_OnClick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

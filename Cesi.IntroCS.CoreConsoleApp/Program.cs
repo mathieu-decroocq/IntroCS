@@ -11,15 +11,25 @@ namespace Cesi.IntroCS.CoreConsoleApp
     {
         static void Main(string[] args)
         {
+
+            using (GenericDal<Post> dal = new GenericDal<Post>())
+            {
+                List<Post> posts = dal.Find(p => p.Content.Contains("Test"));
+
+                foreach (Post post in posts)
+                {
+                    Console.WriteLine($"Id : {post.Id} Titre : {post.Title}");
+                }
+            }
+      
+
             // AddPost();
 
             // UpdateBlogUrl();
 
             // DeleteLastPost();
-            var postDAL = new PostDAL();
-            postDAL.Update(new Post { Id = 2, Title = "Post 2 up", Content = "Du contenu", BlogId = 1 });
 
-            ReadAll();
+            // ReadAll();
 
             Console.ReadLine();
         }
@@ -69,6 +79,12 @@ namespace Cesi.IntroCS.CoreConsoleApp
                     }
                 }
             }
+        }
+
+        private static void UpdateWithDAL()
+        {
+            var postDAL = new PostDAL();
+            postDAL.Update(new Post { Id = 2, Title = "Post 2 up", Content = "Du contenu", BlogId = 1 });
         }
     }
 }

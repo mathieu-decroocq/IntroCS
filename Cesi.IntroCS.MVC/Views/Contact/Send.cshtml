@@ -5,7 +5,6 @@
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>Demande de contact</legend>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.Email)
         </div>
@@ -13,7 +12,6 @@
             @Html.TextBoxFor(model => model.Email)
             @Html.ValidationMessageFor(model => model.Email)
         </div>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.Message)
         </div>
@@ -21,7 +19,6 @@
             @Html.TextAreaFor(model => model.Message)
             @Html.ValidationMessageFor(model => model.Message)
         </div>
-
         <p>
             <input type="submit" value="Envoyer" />
         </p>

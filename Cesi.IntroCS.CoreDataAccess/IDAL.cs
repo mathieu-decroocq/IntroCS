@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cesi.IntroCS.CoreDataAccess
 {
-    public interface IDAL<T>
+    public interface IDAL<T> : IDisposable
     {
         List<T> GetAll();
 

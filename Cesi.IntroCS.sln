@@ -39,7 +39,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cesi.IntroCS.WebAPI", "Cesi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asp-core", "asp-core", "{84078E72-4B36-45B5-8D49-3C0B3099D537}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cesi.IntroCS.CoreWebApp", "Cesi.IntroCS.CoreWebApp\Cesi.IntroCS.CoreWebApp.csproj", "{3A24BFF1-6156-4380-91AF-FE613C3FE955}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cesi.IntroCS.CoreWebApp", "Cesi.IntroCS.CoreWebApp\Cesi.IntroCS.CoreWebApp.csproj", "{3A24BFF1-6156-4380-91AF-FE613C3FE955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{22DA0034-C47C-487C-A757-51415A031E2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{3A24BFF1-6156-4380-91AF-FE613C3FE955}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A24BFF1-6156-4380-91AF-FE613C3FE955}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A24BFF1-6156-4380-91AF-FE613C3FE955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DA0034-C47C-487C-A757-51415A031E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DA0034-C47C-487C-A757-51415A031E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DA0034-C47C-487C-A757-51415A031E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DA0034-C47C-487C-A757-51415A031E2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +123,7 @@ Global
 		{0E3F1C9E-64F5-409D-BA5F-9B756484D950} = {015BDCAD-5106-4529-89ED-54EC755A0885}
 		{B9F40446-5751-42D7-AAAE-A8F3DA466183} = {015BDCAD-5106-4529-89ED-54EC755A0885}
 		{3A24BFF1-6156-4380-91AF-FE613C3FE955} = {84078E72-4B36-45B5-8D49-3C0B3099D537}
+		{22DA0034-C47C-487C-A757-51415A031E2A} = {84078E72-4B36-45B5-8D49-3C0B3099D537}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {925FA601-7FB5-40D5-BBB2-B0B089621507}

@@ -6,9 +6,19 @@
         xmlns:local="clr-namespace:Cesi.IntroCS.WpfApp"
         mc:Ignorable="d" 
         Title="MainWindow" Height="450" Width="800">
-   
-   
-    <Grid>
+
+    <!--<Grid>
+        <Button Click="ButtonBase_OnClick" x:Name="MyBtn" Height="30" Width="70" Content="Click me"></Button>
+    </Grid>-->
+
+
+
+
+
+
+
+
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="80"></ColumnDefinition>
@@ -23,10 +33,30 @@
         <TextBlock Text="Col 0 Row 0" Grid.Column="0" Grid.Row="0"></TextBlock>
         <TextBlock Text="Col 1 Row 0" Grid.Column="1" Grid.Row="0"></TextBlock>
         <TextBlock Text="Col 2 Row 0" Grid.Column="2" Grid.Row="0"></TextBlock>
-        <Button Content="{Binding ButtonText}" Grid.Column="0" Grid.Row="1"></Button>
-        <Button Name="Btn" Height="40" Width="70" Content="Hello" Click="Btn_OnClick" Grid.Column="2" Grid.Row="2"></Button>
+        <Button Content="{Binding ButtonText}" Grid.Column="0" Grid.Row="1" ></Button>
+
+
+
+
+        --><!----><!--
+        <Button Name="Btn" Height="40" Width="70" Content="Hello" Template="{StaticResource Tpl}" Click="Btn_OnClick" Grid.Column="2" Grid.Row="2"></Button>
+
+
+
+
         <Button Name="BtnPi" Height="40" Width="70" Content="Compute Pi" Click="BtnPi_OnClick" IsEnabled="{Binding IsBtnPiActive}" Grid.Column="0" Grid.Row="2"></Button>
-        <TextBlock  Grid.Column="0" Grid.Row="3" Text="{Binding PiResult}"></TextBlock>
+        <TextBlock  Grid.Column="0" Grid.Row="3" Text="{Binding PiResult}" ></TextBlock>
+     
+    </Grid>-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button Content="HomePage" Click="HomeButton_OnClick"></Button>
+            <Button Content="Page1" Click="Page1Button_OnClick"></Button>
+        </StackPanel>
+        <Frame x:Name="MainFrame" Source="Views/HomePage.xaml" Grid.Column="1" Template="{StaticResource TemplateFrame}"></Frame>
     </Grid>
-    
 </Window>

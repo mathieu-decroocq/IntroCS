@@ -36,6 +36,7 @@
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
             </p>
+            <asp:Button runat="server" ID="myBtn" OnClick="myBtn_OnClick"/>
         </div>
     </div>
 

@@ -25,18 +25,7 @@ namespace Cesi.IntroCS.WpfApp
     {
         private bool isBtnPiActive;
         private double piResult;
-        private string buttonText;
-
-        public string ButtonText
-        {
-            get => buttonText;
-            set
-            {
-                buttonText = value;
-                OnPropertyChanged();
-            }
-        }
-
+        
         public bool IsBtnPiActive
         {
             get => isBtnPiActive;
@@ -49,7 +38,7 @@ namespace Cesi.IntroCS.WpfApp
 
         public double PiResult
         {
-            get => piResult;
+            get { return piResult; }
             set
             {
                 piResult = value;
@@ -61,13 +50,6 @@ namespace Cesi.IntroCS.WpfApp
         {
             InitializeComponent();
             this.DataContext = this;
-            ButtonText = "Mon bouton";
-            IsBtnPiActive = true;
-        }
-
-        private void Btn_OnClick(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Hello WPF");
         }
 
         private async void BtnPi_OnClick(object sender, RoutedEventArgs e)
@@ -104,17 +86,43 @@ namespace Cesi.IntroCS.WpfApp
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+    
+
+
+    //private void Btn_OnClick(object sender, RoutedEventArgs e)
+    //{
+    //    MessageBox.Show("Hello WPF");
+    //}
+
+    private void HomeButton_OnClick(object sender, RoutedEventArgs e)
+    {
+      //  MainFrame.NavigationService.Navigate(new Uri(@"Views\HomePage.xaml", UriKind.Relative));
     }
+
+    private void Page1Button_OnClick(object sender, RoutedEventArgs e)
+    {
+       // MainFrame.NavigationService.Navigate(new Uri(@"Views\Page1.xaml", UriKind.Relative));
+    }
+
+    //private string buttonText;
+    //public string ButtonText
+    //{
+    //    get => buttonText;
+    //    set
+    //    {
+    //        buttonText = value;
+    //        OnPropertyChanged();
+    //    }
+    //}
 
     public class MyRecord : INotifyPropertyChanged
     {
         private string buttonText;
-        public event PropertyChangedEventHandler PropertyChanged;
+        //public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -135,5 +143,7 @@ namespace Cesi.IntroCS.WpfApp
                 OnPropertyChanged();
             }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

@@ -9,57 +9,49 @@ namespace Cesi.IntroCS.CoreDataAccess
 {
     public class BlogDAL : IDAL<Blog>
     {
+        private readonly BloggingContext context;
+        public BlogDAL(BloggingContext context)
+        {
+            this.context = context;
+        }
         public List<Blog> Find(Expression<Func<Blog, bool>> findExpression)
         {
-            using (var context = new BloggingContext())
-            {
-                return context.Blogs.Where(findExpression).ToList();
-            }
+            return context.Blogs.Where(findExpression).ToList();
         }
 
         public List<Blog> GetAll()
         {
-            using (var context = new BloggingContext())
-            {
-                return context.Blogs.ToList();
-            }
+            return context.Blogs.ToList();
         }
 
         public Blog GetById(int id)
         {
-            using (var context = new BloggingContext())
-            {
-                var Blog = context.Blogs.SingleOrDefault(p => p.Id == id);
-                return Blog;
-            }
+            var blog = context.Blogs.SingleOrDefault(p => p.Id == id);
+            return blog;
         }
 
-        public void Add(Blog Blog)
+        public void Add(Blog blog)
         {
-            using (var context = new BloggingContext())
-            {
-                context.Blogs.Add(Blog);
-                context.SaveChanges();
-            }
+            context.Blogs.Add(blog);
+            context.SaveChanges();
         }
 
-        public void Update(Blog Blog)
+        public void Update(Blog blog)
         {
-            using (var context = new BloggingContext())
-            {
-                context.Blogs.Update(Blog);
-                context.SaveChanges();
-            }
+            context.Blogs.Update(blog);
+            context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            using (var context = new BloggingContext())
-            {
-                var Blog = context.Blogs.SingleOrDefault(p => p.Id == id);
-                context.Blogs.Remove(Blog);
-                context.SaveChanges();
-            }
+            var blog = context.Blogs.SingleOrDefault(p => p.Id == id);
+            context.Blogs.Remove(blog);
+            context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            context?.Dispose();
         }
     }
 }

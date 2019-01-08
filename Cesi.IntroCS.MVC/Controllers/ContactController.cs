@@ -9,12 +9,6 @@ namespace Cesi.IntroCS.MVC.Controllers
 {
     public class ContactController : Controller
     {
-        // GET: Contact
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet]
         public ActionResult Send()
         {
